@@ -23,7 +23,7 @@ export default function HomepagePage() {
           <Img src="images/img_header_logo.svg" alt="primary logo" className="h-[33px] w-[48px] object-contain" />
         </div>
 
-        <div className="absolute bottom-0 left-0 w-full flex items-end justify-center h-[61px] space-x-20 pb-4
+        <div className="fixed bottom-0 left-0 w-full flex items-end justify-center h-[61px] space-x-20 pb-4
          md:flex md:w-full md:flex-col md:gap-[23px] md:w-full md:absolute md:top-40">
           <img
             src="images/img_frame.svg"
@@ -48,9 +48,9 @@ export default function HomepagePage() {
           />
         </div>
       </div>
-    <div className="hidden sm:block flex w-[179px] h-[154.59px] flex-col gap-1 rounded-[15px] border border-solid border-blue_gray-900_01 bg-gray-900_01 p-[7px] md:-ml-[650px] lg:-ml-[1000px] xl:mr-[200px]" style={{ position: 'sticky', top: '300px', zIndex: 999 }}>
-      <Img src="images/img_group_2085663623.svg" alt="collect image" className="h-[125px]" />
-      <Button color="green_A100" size="2xl" shape="round" className="w-full font-medium sm:px-5">
+    <div className="hidden sm:block flex w-[179px] h-[154.59px] flex-col gap-1 rounded-[15px] border border-solid border-blue_gray-900_01 bg-gray-900_01 p-[7px] md:-ml-[650px] md:w-[179px] md:h-[154.59px] lg:-ml-[800px] xl:mr-[400px]" style={{ position: 'sticky', top: '300px', zIndex: 999 }}>
+      <Img src="images/img_group_2085663623.svg" alt="collect image" className="h-[102.34px] w-[164.35px]" />
+      <Button color="green_A100" size="2xl" shape="round" className="w-full font-medium sm:px-5 md:w-[167.61px] md:h-[34.99px]">
         Collect Treats
       </Button>
     </div>
@@ -80,11 +80,11 @@ export default function HomepagePage() {
               <Img
                 src="images/img_image.png"
                 alt="intro image"
-                className="h-[134px] w-[134px] rounded-lg object-cover md:w-full md:h-[150px] md:w-[150px] md:mr-[280px] md:-mt-[10px] lg:h-[210px] lg:w-[213px] lg:-ml-[200px] xl:h-[306px] xl:w-[310px] xl:-ml-[400px]" 
+                className="h-[134px] w-[134px] rounded-lg object-cover md:w-full md:h-[154px] md:w-[152px] md:mr-[280px] md:-mt-[10px] lg:h-[210px] lg:w-[213px] lg:-ml-[200px] xl:h-[306px] xl:w-[310px] xl:-ml-[400px]" 
               />
               <div className="flex w-[43%] flex-col md:-mt-[170px] md:-ml-[70px]">
               <div className="flex flex-col items-start">
-                <div className="flex items-center gap-[7px] rounded-[5px] bg-blue_gray-900 p-1 mt-[8px] md:w-[68px] md:h-[17px] md:ml-[70px] lg:-mt-[50px]">
+                <div className="flex items-center gap-[7px] rounded-[5px] bg-blue_gray-900 p-1 mt-[8px] md:w-[68px] md:h-[17px] md:ml-[70px] lg:-mt-[50px] xl:-mt-[150px]">
                   <Img
                   src="images/img_5fad6c775f5213b.png"
                   alt="optimism image"
@@ -99,12 +99,12 @@ export default function HomepagePage() {
                     Take a deep dive into Superboard and learn more about web3 and crypto.
                 </Text>
               </div>
-              <div className="flex items-center gap-1 md:gap-[10.5px] md:mt-[10px] lg:mt-[70px]">
+              <div className="flex items-center gap-1 md:gap-[10.5px] md:mt-[10px] lg:mt-[70px] xl:mt-[110px]">
                 <Button
                   color="green_A100"
                   size="xs"
                   shape="round"
-                  className="w-[66px] h-[25px] font-medium sm:px-5 whitespace-nowrap mt-[2px] md:w-[93.87px] md:h-[30.76px] md:ml-[70px]"
+                  className="w-[66px] h-[25px] font-medium sm:px-5 whitespace-nowrap mt-[2px] md:w-[93.87px] md:h-[30.76px] md:ml-[70px] xl:"
                 >
                   Start Quest
                 </Button>
@@ -130,7 +130,7 @@ export default function HomepagePage() {
                 </Text>
               </div>
               <div className="flex hidden sm:block">
-                <div className="flex md:-mt-[30px] md:ml-[670px] lg:ml-[1100px] lg:-mt-[60px] xl:ml-[1900px]">
+                <div className="flex md:-mt-[60px] md:ml-[670px] lg:ml-[1100px] lg:-mt-[60px] xl:ml-[1900px]">
                   <Button
                     onClick={() => {
                       sliderRef1?.current?.slidePrev();
@@ -155,10 +155,73 @@ export default function HomepagePage() {
                 </div>
               </div>
           </div>
-        </div>
-      </div>
-    </div>
-</div>
-    </>
+          <div className="mx-[20px] -mt-[30px] flex w-[322px] h-[555px] max-w-[792px] gap-[27px] md:w-[550px] md:h-[255px] md:ml-[40px] md:mt-[80px] lg:ml-[100px] lg:mt-[70px] lg:w-[900px] lg:h-[455px] xl:mt-[30px]">
+            {/* quest slider section */}
+            <Slider
+              autoPlay
+              autoPlayInterval={2000}
+              responsive={{ 0: { items: 1 }, 550: { items: 2 }, 1050: { items: 3 } }}
+              disableDotsControls
+              activeIndex={sliderState1}
+              onSlideChanged={(e) => {
+              setSliderState1(e?.item);
+              }}
+              ref={sliderRef1}
+              items={[...Array(9)].map(() => (
+            <React.Fragment key={Math.random()}>
+             <div className="px-[13.5px]">
+                <div className="flex flex-col">
+                  <div>
+                    <Img
+                      src="images/img_image_267x246.png"
+                      alt="slider image"
+                      className="h-[267px] w-full rounded-tl-lg rounded-tr-lg object-cover md:h-auto"
+                    />
+                    <div className="relative mt-[-34px] flex flex-col items-center justify-center rounded-bl-lg rounded-br-lg bg-gray-900_01 p-2">
+                      <div className="mt-1.5 h-[3px] w-[31%] self-start bg-green-A100" />
+                        <div className="relative mt-[-3px] h-[3px] w-[30%] bg-blue_gray-900" />
+                          <div className="relative mr-2 mt-[-3px] h-[3px] w-[27%] self-end bg-blue_gray-900 md:mr-0" />
+                            <Heading size="lg" as="h2" className="mt-2.5 w-[96%] leading-[19px] md:w-full">
+                              Bridge Express: Chain to Chain Connection
+                            </Heading>
+                            <div className="mb-2 mt-[26px] flex items-center self-stretch">
+                              <Img src="images/img_user.png" alt="user image" className="h-[27px] object-cover" />
+                                <div className="flex flex-col items-start">
+                                  <Heading size="s" as="h3">
+                                    100
+                                  </Heading>
+                                  <Text as="p" className="!font-normal">
+                                    Chads
+                                  </Text>
+                                </div>
+                                <div className="ml-[54px] flex flex-1 items-center gap-3">
+                                  <Img src="images/img_television.svg" alt="media image" className="h-[30px]" />
+                                    <div className="relative h-[29px] flex-1">
+                                      <div className="absolute bottom-[0.98px] right-[0.60px] m-auto h-[22px] w-[45px] border border-solid border-black-900 bg-deep_orange-A400_01" />
+                                        <div className="absolute bottom-0 left-0 right-0 top-0 m-auto h-[22px] w-[46px] border border-solid border-black-900 bg-yellow-A200" />
+                                          <Button
+                                            color="green_A100"
+                                            size="xs"
+                                            shape="square"
+                                            className="absolute left-[0.00px] top-[0.00px] m-auto min-w-[45px] border border-solid border-black-900 font-inter"
+                                          >
+                                            NFT
+                                          </Button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </React.Fragment>
+                        ))}
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </>
   )
 }
