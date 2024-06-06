@@ -80,7 +80,7 @@ export default function HomepagePage() {
               <Img
                 src="images/img_image.png"
                 alt="intro image"
-                className="h-[134px] w-[134px] rounded-lg object-cover md:w-full md:h-[154px] md:w-[152px] md:mr-[280px] md:-mt-[10px] lg:h-[210px] lg:w-[213px] lg:-ml-[200px] xl:h-[306px] xl:w-[310px] xl:-ml-[400px]" 
+                className="h-[134px] w-[134px] rounded-lg object-cover md:w-full md:h-[152px] md:w-[154px] md:mr-[280px] md:-mt-[10px] lg:h-[210px] lg:w-[213px] lg:-ml-[200px] xl:h-[306px] xl:w-[310px] xl:-ml-[400px]" 
               />
               <div className="flex w-[43%] flex-col md:-mt-[170px] md:-ml-[70px]">
               <div className="flex flex-col items-start">
@@ -155,6 +155,7 @@ export default function HomepagePage() {
                 </div>
               </div>
           </div>
+          
           <div className="mx-[20px] -mt-[30px] flex w-[322px] h-[555px] max-w-[792px] gap-[27px] md:w-[550px] md:h-[255px] md:ml-[40px] md:mt-[80px] lg:ml-[100px] lg:mt-[70px] lg:w-[900px] lg:h-[455px] xl:mt-[30px]">
             {/* quest slider section */}
             <Slider
@@ -220,8 +221,107 @@ export default function HomepagePage() {
                     </div>
                   </div>
                 </div>
+            </div>
+            
+            {/* trending mints section */}
+          <div className="mt-9 flex w-[63%] flex-col items-center -ml-[90px] -mt-[70px] md:mt-[130px] md:ml-[60px] lg:w-[1000px] lg:ml-[500px] lg:mt-[50px] xl:ml-[150px] xl:-mt-[20px]">
+            <div className="flex items-center justify-between gap-5 self-stretch sm:flex-col w-[322px]">
+              <div className="flex flex-col items-start ">
+                <Heading size="xl" as="h2" className="!text-white-A700 whitespace-nowrap md:text-2xl lg:text-3xl xl:text-5xl">
+                  Trending mints onchain
+                </Heading>
+                <Text size="md" as="p" className="w-full leading-7 !text-gray-600 md:whitespace-nowrap">
+                  Aggregating mints from Zora, mint.fun and more for you!
+                </Text>
+              </div>
+              <div className="flex hidden sm:block lg:-mr-[500px] xl:-mr-[1200px]">
+                <Button size="md" className="min-w-[79px] rounded-[14px] font-medium md:-mt-[70px] md:ml-[520px] ">
+                  View all
+                </Button>
+                <Button shape="circle" className="ml-[18px] w-[28px] !rounded-[14px] md:-mt-[30px] md:ml-[600px]">
+                  <Img src="images/img_group_26.svg" />
+                </Button>
+                <Button shape="circle" className="ml-1.5 w-[28px] !rounded-[14px]  md:-mt-[27px] md:ml-[630px]">
+                  <Img src="images/img_group_27.svg" />
+                </Button>
               </div>
             </div>
+            <div className="mt-[11px] flex items-center gap-[15px] self-stretch sm:flex-col w-[280px] md:flex-col xl:ml-[50px]">
+              <Img
+                src="images/img_image_1700.png"
+                alt="image 1700"
+                className="h-[146px] w-[32%] rounded-lg object-cover sm:w-full md:w-full md:h-auto md:flex-col md:w-[143px] md:h-[120px] md:-ml-[170px] xl:w-[500px] xl:h-[287px] xl:-ml-[290px] lg:w-[174px] lg:h-[146px] "
+              />
+              <Img
+                src="images/img_image_1700.png"
+                alt="image 1701"
+                className="h-[144px] w-[32%] rounded-lg object-cover sm:w-full md:w-full md:h-auto md:flex-col md:w-[143px] md:h-[120px] md:ml-[150px] md:-mt-[134px] xl:w-[500px] xl:h-[287px] xl:-mt-[302px] xl:-mr-[200px] lg:w-[174px] lg:h-[146px] lg:-mr-[100px] lg:-mt-[160px]"
+              />
+              <Img
+                src="images/img_image_1700.png"
+                alt="image 1702"
+                className="h-[144px] w-[32%] rounded-lg object-cover sm:w-full md:w-full md:h-auto md:flex-col md:w-[143px] md:h-[120px] md:ml-[480px] md:-mt-[134px] xl:w-[500px] xl:h-[287px] xl:-mt-[302px] xl:-mr-[500px] lg:w-[174px] lg:h-[146px] lg:-mr-[200px] lg:-mt-[160px]"
+              />
+            </div>
+            <div className="container-xs flex items-center justify-between gap-12 ml-[50px] md:p-5 sm:flex-col md:ml-[10px] xl:-ml-[70px]">
+              <div className="flex w-[63%] justify-between gap-5 sm:w-full">
+                <Heading size="md" as="h3" className="w-[41%] leading-[19px] -ml-[50px] whitespace-nowrap xl:text-3xl lg:text-2xl">
+                  Welcome to Zora
+                </Heading>
+                <Heading size="md" as="h4" className="w-[41%] leading-[19px] whitespace-nowrap mr-[20px] md:-mr-[30px] xl:text-3xl xl:-mt-[1px] xl:-mr-[1px] lg:text-2xl lg:-mr-[80px]">
+                  Welcome to Zora
+                </Heading>
+              </div>
+              <Heading size="md" as="h5" className="w-[26%] leading-[19px] sm:w-full whitespace-nowrap -ml-[20px] md:-mt-[65px] md:-mr-[250px] xl:text-3xl xl:ml-[950px] xl:-mt-[80px] lg:text-2xl lg:ml-[70px] lg:-mt-[80px]">
+                Welcome to Zora
+              </Heading>
+            </div>
+            <div className="container-sm mt-3 flex items-center justify-between gap-5 self-stretch md:p-5 md:-ml-[50px] md:-mt-[30px]">
+              <div className="flex items-center ml-[10px] w-[40px] ">
+                <Img src="images/img_user.png" alt="user image" className="h-[18px] object-cover xl:-ml-[70px] xl:hidden xl:block lg:hidden lg:block" />
+                <div className="flex flex-col items-start md:ml-[10px] xl:text-3xl xl:-ml-[60px]">
+                  <Heading className="xl:text-3xl lg:text-2xl" as="h6">10K+</Heading>
+                  <Text size="xs" as="p" className="self-center xl:text-3xl lg:text-2xl">
+                    Minted
+                  </Text>
+                </div>
+              </div>
+              <div className="flex items-center">
+                <Img
+                  src="images/img_5fad6c775f5213b.png"
+                  alt="bridge image"
+                  className="h-[18px] w-[18px] rounded object-cover ml-[30px] md:ml-[75px]"
+                />
+                <Img src="images/img_user.png" alt="user image" className="ml-[35px] h-[18px] object-cover hidden xl:hidden block lg:hidden lg:block" />
+                <div className="flex flex-col items-start -ml-[50px] md:ml-[1px] xl:ml-[120px] lg:ml-[70px]">
+                  <Heading className="xl:text-3xl lg:text-2xl" as="p">10K+</Heading>
+                  <Text size="xs" as="p" className="self-center xl:text-3xl lg:text-2xl ">
+                    Minted
+                  </Text>
+                </div>
+              </div>
+              <div className="flex items-center">
+                <Img
+                  src="images/img_5fad6c775f5213b.png"
+                  alt="bridge image"
+                  className="h-[18px] w-[18px] rounded object-cover ml-[50px] md:ml-[100px]"
+                />
+                <Img src="images/img_user.png" alt="user image" className="ml-[37px] h-[18px] object-cover mr-[30px] md:ml-[15px] xl:hidden xl:block lg:hidden lg:block" />
+                <div className="flex flex-col items-start self-end -ml-[30px] md:-ml-[25px] xl:ml-[100px] lg:ml-[70px]">
+                  <Heading className="xl:text-3xl lg:text-2xl" as="p">10K+</Heading>
+                  <Text size="xs" as="p" className="self-center xl:text-3xl lg:text-2xl">
+                    Minted
+                  </Text>
+                </div>
+              </div>
+              <Img
+                src="images/img_5fad6c775f5213b.png"
+                alt="bridge image"
+                className="h-[18px] w-[18px] rounded object-cover ml-[50px] md:ml-[100px]"
+              />
+            </div>
+            </div>
+          </div>
         </>
   )
 }
